@@ -6,7 +6,11 @@
  * @category public
  */
 
+import { useNavigate } from 'react-router-dom';
+
 export const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="space-y-8">
       <div className="text-center">
@@ -87,7 +91,10 @@ export const HomePage = () => {
       </div>
 
       <div className="text-center">
-        <button className="rounded-md bg-primary-600 px-6 py-3 text-base font-medium text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+        <button
+          onClick={() => navigate('/checklists')}
+          className="rounded-md bg-primary-600 px-6 py-3 text-base font-medium text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        >
           Começar Agora
         </button>
       </div>
